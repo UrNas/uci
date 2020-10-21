@@ -9,6 +9,7 @@ import (
 
 func main() {
 	var userInput string
+	fmt.Print("Please Enter Word > ")
 	scanner := bufio.NewScanner(os.Stdin)
 	if scanner.Scan() {
 		userInput = scanner.Text()
