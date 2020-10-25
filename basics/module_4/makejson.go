@@ -12,14 +12,12 @@ func main() {
 	for {
 		person := make(map[string]string)
 		fmt.Print("Please Enter Your Name > ")
-		for scanner.Scan() {
+		if scanner.Scan() {
 			person["name"] += scanner.Text()
-			break
 		}
 		fmt.Print("Please Enter Your Adress > ")
-		for scanner.Scan() {
+		if scanner.Scan() {
 			person["address"] += scanner.Text()
-			break
 		}
 		jsonData, err := json.Marshal(&person)
 		if err != nil {

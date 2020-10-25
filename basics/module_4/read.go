@@ -48,7 +48,7 @@ func main() {
 			}
 		}
 		for i, v := range persons {
-			fmt.Printf("[%d] %s %s\n", i, v.fname, v.lname)
+			fmt.Printf("[%d] %s %s\n", i+1, v.fname, v.lname)
 		}
 	}
 }
