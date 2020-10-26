@@ -9,24 +9,24 @@ import (
 // s =½ a t2 + vot + so
 
 func main() {
-	var acceraion float64
+	var acceleration float64
 	var velocity float64
-	var displacemnt float64
-	var peroid float64
+	var displacement float64
+	var period float64
 
 	fmt.Print("Please Enter Three values > ")
-	if _, err := fmt.Scanln(&acceraion, &velocity, &displacemnt); err != nil {
+	if _, err := fmt.Scanln(&acceleration, &velocity, &displacement); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	fn := genDisplaceFn(acceraion, velocity, displacemnt)
+	fn := genDisplaceFn(acceleration, velocity, displacement)
 	for {
 		fmt.Print("Please Enter time > ")
-		if _, err := fmt.Scan(&peroid); err != nil {
+		if _, err := fmt.Scan(&period); err != nil {
 			fmt.Println(err)
 			os.Exit(2)
 		}
-		fmt.Println(fn(peroid))
+		fmt.Println(fn(period))
 	}
 }
 
